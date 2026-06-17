@@ -1859,3 +1859,229 @@ button {
         width: auto;
     }
 }
+
+/* =========================================
+   EXTRA MOBILE RESPONSIVE FIXES
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    /* Main layout stacking */
+    #primary-balance-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Character selection */
+    #balance-character-select-container {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    #character-select-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .character-select-button,
+    .lazy-character-loader {
+        width: 100%;
+        max-width: 140px;
+        height: auto;
+        margin: auto;
+    }
+
+    .character-select-button img {
+        width: 100%;
+    }
+
+    /* Tabs */
+    #balance-tabs-container {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .tier-selector-button {
+        width: 64px;
+        min-width: 64px;
+    }
+
+    /* Main content */
+    #main-balance-window {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Survivor/Killer builds */
+    .survivor-build-component,
+    #killer-build-component {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    #survivor-builds-container,
+    #killer-builds-container {
+        width: 100%;
+    }
+
+    .loadout-slot {
+        height: 72px;
+        width: 72px;
+        flex-shrink: 0;
+    }
+
+    /* Perk search modal
+    #perk-search-module-container {
+        width: 95vw !important;
+        min-width: unset !important;
+        max-width: unset !important;
+
+        height: 80vh;
+        max-height: 80vh;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #perk-search-results-module {
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .perk-slot-result {
+        min-width: 72px;
+        max-width: 72px;
+    }
+
+    .item-slot-result {
+        min-width: 64px;
+        max-width: 64px;
+        max-height: 64px;
+    }*/
+
+    /* Errors panel */
+    #errors-window {
+        width: 100%;
+        height: auto;
+    }
+
+    .error-list-item {
+        max-height: unset;
+    }
+
+    .error-header-container {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .error-title {
+        font-size: 1rem;
+    }
+
+    /* Settings + modal windows */
+    #settings-menu,
+    #alert-window,
+    #image-gen-window,
+    #room-menu,
+    #balancing-select-menu,
+    #alert-menu,
+    #image-gen-menu,
+    #modal-import-content {
+        width: 92vw !important;
+        max-width: 92vw !important;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    /* Balance selector */
+    #balancing-select-options-container {
+        max-height: 60vh;
+    }
+
+    .balancing-select-option {
+        grid-template-columns: 70px 1fr;
+        min-height: 70px;
+    }
+
+    .balancing-select-option-title {
+        font-size: 1rem;
+    }
+
+    .balancing-select-last-updated {
+        font-size: 0.8rem;
+    }
+
+    /* Chat */
+    #chat-input-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Import/export buttons */
+    #import-export-button-container {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    #import-export-button-container button {
+        width: 100%;
+    }
+
+    /* Lore image cleanup */
+    #killer-lore-image-container {
+        display: none;
+    }
+
+    /* Prevent giant hover scaling on touch devices */
+    .tier-selector-button:hover,
+    .character-select-button img:hover,
+    #alert-ok-button:hover,
+    #image-gen-ok-button:hover,
+    #modal-import-cancel-button:hover,
+    #balancing-select-button:hover,
+    #balancing-select-close-button:hover {
+        width: inherit;
+        font-size: inherit;
+        padding: inherit;
+    }
+}
+
+.flex-break {
+    display: none;
+}
+
+/* Mobile only */
+@media screen and (max-width: 1024px) {
+    .flex-break {
+        display: block;
+        flex-basis: 100%;
+        height: 0;
+    }
+}
